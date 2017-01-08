@@ -1,0 +1,136 @@
+@mixin gradient {
+  background: rgba(96,184,169,1);
+background: -moz-linear-gradient(45deg, rgba(96,184,169,1) 0%, rgba(96,184,169,0.62) 1%, rgba(96,184,169,0.62) 21%, rgba(46,74,117,0.62) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(96,184,169,1)), color-stop(1%, rgba(96,184,169,0.62)), color-stop(21%, rgba(96,184,169,0.62)), color-stop(100%, rgba(46,74,117,0.62)));
+background: -webkit-linear-gradient(45deg, rgba(96,184,169,1) 0%, rgba(96,184,169,0.62) 1%, rgba(96,184,169,0.62) 21%, rgba(46,74,117,0.62) 100%);
+background: -o-linear-gradient(45deg, rgba(96,184,169,1) 0%, rgba(96,184,169,0.62) 1%, rgba(96,184,169,0.62) 21%, rgba(46,74,117,0.62) 100%);
+background: -ms-linear-gradient(45deg, rgba(96,184,169,1) 0%, rgba(96,184,169,0.62) 1%, rgba(96,184,169,0.62) 21%, rgba(46,74,117,0.62) 100%);
+background: linear-gradient(45deg, rgba(96,184,169,1) 0%, rgba(96,184,169,0.62) 1%, rgba(96,184,169,0.62) 21%, rgba(46,74,117,0.62) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60b8a9', endColorstr='#2e4a75', GradientType=1 );
+}
+
+.single_image{
+	position: relative;
+	transition: all 1s;
+}
+
+.single_image img{
+	width: 222px;
+}
+
+.single_image:hover div.image_overlay{
+	opacity: 1;
+}
+
+.image_overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @include gradient;
+  left: 0;
+  top: 0;
+  opacity: 0;
+	transition: all 1s;
+}
+
+
+.image_overlay a{
+  position: absolute;
+  text-decoration: none;
+  bottom: 10px;
+  left: 1em;
+  font-size: 1.1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+// magnific pop up
+
+/* Styles for dialog window */
+#small-dialog {
+	background: #0F1C24;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 500px;
+	margin: 40px auto;
+	position: relative;
+  border: 1px solid #d0d0cf;
+}
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	transform: translateY(0) perspective( 600px ) rotateX( 0 );
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}

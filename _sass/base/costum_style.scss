@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+html {
+    background-color: #F5F5F5;
+}
+//       scroll bar
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+    width: 0.4em;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $line;
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.card_wrapper {
+    width: 1440px;
+    max-width: 99%;
+    margin: 0 auto;
+}
+.divider {
+    text-align: center;
+    svg {
+      width: 30%;
+      g {
+        fill: $text-color;
+      }
+    }
+}
+.divider_white {
+    text-align: center;
+    svg {
+      width: 25%;
+      g {
+        fill: $background;
+      }
+    }
+}

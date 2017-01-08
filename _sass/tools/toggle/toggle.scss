@@ -1,0 +1,186 @@
+/* Custom overlay navigation
+/* ---------------------------------------------- */
+.button_container {
+    position: relative;
+    position: fixed;
+    // margin-left: -2em;
+    margin-top: 14px;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-transition: opacity .25s ease;
+            transition: opacity .25s ease;
+}
+
+/* Animate the top hamburger bar */
+.button_container.active .top {
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+        -ms-transform: translateY(8px) translateX(0) rotate(45deg);
+            transform: translateY(8px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+
+/* Set the middle hamburger bar's opacity to 0  */
+.button_container.active .middle {
+    opacity: 0;
+    background: #FFF;
+}
+
+/* Animate the bottom hamburger bar */
+.button_container.active .bottom {
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+        -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
+            transform: translateY(-8px) translateX(0) rotate(-45deg);
+    background: #FFF;
+}
+
+.button_container span {
+    background: #FF73B3;
+    border: none;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 8px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 16px;
+}
+
+/* The overlay */
+.overlay {
+    position: fixed;
+    display: block;
+    background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    top: 0;
+    border: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .35s, visibility .35s, height .35s;
+            transition: opacity .35s, visibility .35s, height .35s;
+    overflow: auto;
+}
+
+.overlay.open {
+    opacity: .95;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    -webkit-animation: fadeInRight .5s ease forwards;
+            animation: fadeInRight .5s ease forwards;
+    -webkit-animation-delay: .35s;
+        animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(1) {
+    -webkit-animation-delay: .40s;
+            animation-delay: .40s;
+}
+
+.overlay.open li:nth-of-type(2n) {
+    -webkit-animation-delay: .50s;
+            animation-delay: .50s;
+}
+
+.overlay nav {
+    position: relative;
+    height: 50%;
+    top: 50%;
+    font-size: 30px;
+    font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+.overlay ul li {
+    display: block;
+    height: 15%;
+    height: calc(100% / 8);
+    min-height: 65px;
+    position: relative;
+    opacity: 0;
+}
+
+.overlay ul li a {
+    display: block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.3em;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+    width: 50%;
+}
+
+/* Link underline on hover */
+.overlay ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: .15s;
+            transition: .15s;
+}
+/* Navigation link animation */
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

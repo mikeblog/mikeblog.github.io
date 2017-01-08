@@ -1,0 +1,137 @@
+/* ===================
+   Header Section
+  =================== */
+#header {
+    text-transform: uppercase;
+    .navbar {
+        padding: 2em 0;
+    }
+    .content {
+        padding: .8em 0;
+        font-weight: bolder;
+        .col_1 {
+          text-align: center;
+          .container {
+            padding: 0 1em 1em 1em;
+            .img {
+              .first_wave {
+                position: absolute;
+                width: 55%;
+                bottom: 4%;
+                left: 0;
+                z-index: 1;
+              }
+              .second_wave {
+                position: absolute;
+                width: 50%;
+                bottom: 4.6%;
+                left: 3%;
+                z-index: 0;
+              }
+              .lighthouse {
+                position: absolute;
+                bottom: 8%;
+                left: 48%;
+                width: 4%;
+              }
+              .galeon {
+                position: absolute;
+                bottom: 12%;
+                left: 7%;
+                width: 10%;
+                z-index: 0;
+              }
+              .fly {
+                position: absolute;
+                top: 30%;
+                left: 5%;
+                width: 10%;
+                animation-name: fly;
+                z-index: 1;
+                @include animation-duration(60s);
+                @include animation-iteration-count(infinite);
+              }
+              .cloud {
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                width: 10%;
+                animation-name: cloud;
+                z-index: 2;
+                @include animation-duration(80s);
+                @include animation-iteration-count(infinite);
+              }
+              .second_cloud {
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                width: 10%;
+              }
+              .third_cloud {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 5%;
+                animation-name: cloud;
+                @include animation-duration(80s);
+                @include animation-iteration-count(infinite);
+              }
+            }
+          }
+        }
+        // text
+        .col_2 {
+          text-align: right;
+          font-size: 4.88em;
+          p {
+            padding-top: .9em;
+            font-size: .3em;
+            i {
+              transition: all 1s;
+              cursor: pointer;
+              &:hover {
+                color: $line;
+                transform: translate(0px, -10px) scale(1.1);
+              }
+            }
+          }
+          .social {
+            i {
+              font-size: .3em;
+              border-radius: 50%;
+              padding: .3em .3em .3em .3em;
+              border: 2px solid #fff;
+              transition: all 1s;
+              &:hover {
+                color: $line;
+                border: 2px solid $line;
+                transform: translate(0px, -10px) scale(1.1);
+              }
+            }
+          }
+        }
+    }
+    .header {
+        background: #424C5C;
+        position: relative;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+    .header a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .header:before {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        bottom: 0;
+        transform: skewY(3.5deg);
+        transform-origin: 0;
+    }
+}

@@ -1,0 +1,55 @@
+/* ===================
+   About Section
+  =================== */
+#about {
+    padding: 5em 0 1em 0;
+    color: $text-color;
+    .col_1 {
+      padding-top: 2em;
+      .palma {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: all 600ms;
+        &:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.32);
+        }
+      }
+      .elephant {
+        position: absolute;
+        width: 20%;
+        top: 160%;
+        left: 17.5%;
+        z-index: 1;
+      }
+    }
+    .col_2 {
+      padding: 4em 2em 4em 2em;
+      background-color: $test;
+      color: $background;
+      @include angled-edge('outside top','upper left', $test, $width: 2000, $height: 80);
+      @include angled-edge('outside bottom','lower right', $test, $width: 2000, $height: 80);
+      h3 {
+        font-size: 2.5em;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+
+      }
+      p {
+        font-size: 1.5em;
+        letter-spacing: 0.8px;
+      }
+    }
+    .col_3 {
+      padding: 8em 0;
+      .me {
+        padding-left: .3em;
+        img {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          transition: all 600ms;
+          &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.32);
+          }
+        }
+      }
+    }
+
+}

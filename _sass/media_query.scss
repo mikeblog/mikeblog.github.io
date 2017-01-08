@@ -1,0 +1,92 @@
+/*==================================================
+=            Media Queries             =
+==================================================*/
+
+
+
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+     .fly, .elephant, .ice {
+       display: none;
+     }
+
+     #about .col_2::before, #about .col_2::after {
+       display: none;
+     }
+     #about .col_2 {
+        padding: 3em 1em 1em 1em;
+        font-size: .9em;
+    }
+    #contanct .col_1 .frame .container .button {
+      margin-top: 2em;
+    }
+
+    }
+    @media only screen and (min-width: 414px) and (max-width: 736px) {
+      #header .content .col_1 .container .img {
+        display: none;
+      }
+      .fly, .elephant, .ice, .bear, .cloud, .second_cloud, .third_cloud, .palma {
+        display: none;
+      }
+      #about .col_3 {
+        padding: .3em 0;
+    }
+    #about {
+        padding: 0 0 1em 0;
+    }
+    #latest .col-2 .images {
+        padding: 2em 0;
+        padding-left: 2em;
+    }
+    #article .col-2 {
+        padding: 0.5em 0;
+        padding-left: 2em;
+    }
+    #contanct .col_2 .menu {
+      display: none;
+    }
+    #contanct .col_2 {
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+    #contanct .col_1 .frame .container {
+        padding-top: 0;
+        padding-bottom: 1em;
+    }
+    #latest .col-1 {
+      padding-bottom: 1em;
+    }
+    }
+    @media only screen and (max-width: 40em) {
+      .fly, .elephant, .ice, .bear, .cloud, .second_cloud, .third_cloud {
+        display: none;
+      }
+      #about .col_2::before, #about .col_2::after {
+        display: none;
+      }
+      #about .col_2 {
+         padding: 3em 1em 1em 1em;
+         font-size: .9em;
+      }
+      #contanct .col_2 .menu {
+        display: none;
+      }
+      #header .content .col_1 .container .img {
+        display: block;
+      }
+      #header .content .col_2 {
+        font-size: 3em;
+      }
+      #about .col_3 {
+        padding: 0;
+      }
+      #about {
+        padding: 1em 0 1em 0;
+        color: #424C5C;
+      }
+      .button_container {
+        left: 80%;
+      }
+
+    }

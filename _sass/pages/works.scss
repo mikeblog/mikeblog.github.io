@@ -1,0 +1,184 @@
+/* ===================
+   Page Works
+  =================== */
+
+.post-nav {
+    height: 45px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    display: block;
+    z-index: 99;
+    transition: all 1s;
+    &:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+    i {
+      color: $line;
+    }
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+    .title-string {
+      position: absolute;
+      height: 45px;
+      top: 0;
+      left: 0;
+      padding-left: 75px;
+      color: $text-color;
+      letter-spacing: .2em;
+      text-decoration: none !important;
+      border: none !important;
+      overflow: hidden;
+      display: inline-block;
+    }
+        .title-string:hover p.blurb {
+          margin-top: -45px; }
+      .title-string p {
+        margin: 0px;
+        font-size: 2em;
+        line-height: 45px;
+        height: 45px;
+        text-transform: uppercase;
+        display: block;
+        transition: all 0.5s ease-in-out; }
+        .title-string p.back-message {
+          text-transform: none;
+          font-style: italic;
+          font-size: 1.8em; }
+          .title-string p.back-message .icon-reply {
+            margin-right: 8px; }
+}
+
+#cards {
+  .header {
+    background: $text-color;
+    text-align: center;
+    overflow: hidden;
+  }
+  .text {
+    padding: 30px 10px;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  .website {
+    background: #fff;
+    box-shadow: 0px 25px 30px -20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  .grid {
+    padding: 5px;
+    perspective: 1000px;
+  }
+  .grid .item {
+    max-width: 98%;
+    margin: auto 0;
+    background: #ccc;
+    height: 160px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 334px;
+    background-position: center;
+    background-size: cover;
+    transition: all 600ms;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+    p {
+      opacity: 0;
+    }
+    &:hover {
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+      filter: brightness(0.8);
+      -webkit-filter: brightness(0.8);
+    }
+
+  }
+  .grid .item:nth-child(1) {
+    background-image: url(https://res.cloudinary.com/unclesdesigns/image/upload/v1480626284/nextwetravel_wu4jiq.png);
+  }
+  .grid .item:nth-child(2) {
+    background-image: url(https://res.cloudinary.com/unclesdesigns/image/upload/v1472740575/background_xvoddl_rutgef.png);
+  }
+  .grid .item:nth-child(3) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2921840/dribbble_stickermule.png);
+  }
+  .grid .item:nth-child(4) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2917699/untitled-1.png);
+  }
+  .grid .item:nth-child(5) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2920459/dribbble_pill.png);
+  }
+  .grid .item:nth-child(6) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2920159/untitled-1.png);
+  }
+  .grid .item:nth-child(7) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/52758/screenshots/2919566/st_john_usvi_fish.jpg);
+  }
+  .grid .item:nth-child(8) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/246575/screenshots/2919362/dribbble.jpg);
+  }
+  .grid .item:nth-child(9) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/299/screenshots/2917854/fizzy-shades.png);
+  }
+  .grid .item:nth-child(10) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2917699/untitled-1.png);
+  }
+  .grid .item:nth-child(11) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/1061/screenshots/2916828/mimita_2x.png);
+  }
+  .grid .item:nth-child(12) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2916809/dribbble_lemon.png);
+  }
+  .grid .item:nth-child(13) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2915526/untitled-1.png);
+  }
+  .grid .item:nth-child(14) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/3460/screenshots/2915278/business-cards.png);
+  }
+  .grid .item:nth-child(15) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2915065/dribbble_soda.png);
+  }
+  .grid .item:nth-child(16) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/2914950/bear.jpg);
+  }
+  .grid .item:nth-child(17) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2914297/dribbble_acorn.png);
+  }
+  .grid .item:nth-child(18) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2911678/dribbble_beerglass.png);
+  }
+  .grid .item:nth-child(19) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2910866/dribbble_whale.png);
+  }
+  .grid .item:nth-child(4n-5) {
+    height: 150px;
+  }
+  .grid .item:nth-child(2n) {
+    height: 400px;
+  }
+  .grid .item:nth-child(3n) {
+    height: 320px;
+  }
+  .grid .item {
+    position: relative;
+    opacity: 0;
+  }
+  .item.is-visible {
+    animation: Items 600ms ease-in forwards;
+  }
+  @keyframes Items {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
